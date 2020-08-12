@@ -1,0 +1,21 @@
+<h1>Duck Show Page</h1>
+
+<h4><label>Duck Name: </label><%= @duck.name%></h4>
+
+<h4><label>Duck Description: </label><%= @duck.description%></h4>
+<br>
+<br>
+<h4><label>Owned by: </label></h4>
+    
+        <%if @duck.student%>
+            <p><%=@duck.student.name%></p>
+        <%else %>
+            <label>No Ducks Owned! Woops!</label>
+        <% end %>
+
+<br>
+<br>
+
+<%= link_to 'Back To All Ducks', ducks_path %>
+    
+        
